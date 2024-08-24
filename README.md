@@ -2,19 +2,24 @@
 
 ## Table of Contents
 1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Prerequisites](#prerequisites)
-5. [Installation](#installation)
-6. [Usage](#usage)
-7. [Project Structure](#project-structure)
-8. [Components](#components)
-9. [State Management](#state-management)
-10. [Styling](#styling)
+2. [Live Demo](#live-demo)
+3. [Features](#features)
+4. [Technologies Used](#technologies-used)
+5. [Prerequisites](#prerequisites)
+6. [Installation](#installation)
+7. [Usage](#usage)
+8. [Project Structure](#project-structure)
+9. [Components](#components)
+10. [State Management](#state-management)
+11. [Styling](#styling)
 
 ## Introduction
 
 The Quiz App is an interactive, web-based application designed to provide users with an engaging quiz-taking experience. Built with React and leveraging modern web technologies, this app offers a seamless and responsive interface for users to test their knowledge across various topics.
+
+## Live Demo
+
+Experience the Quiz App in action: [https://quiz-app-gamma-smoky.vercel.app/](https://quiz-app-gamma-smoky.vercel.app/)
 
 ## Features
 
