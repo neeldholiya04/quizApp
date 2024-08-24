@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+# Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Prerequisites](#prerequisites)
+5. [Installation](#installation)
+6. [Usage](#usage)
+7. [Project Structure](#project-structure)
+8. [Components](#components)
+9. [State Management](#state-management)
+10. [Styling](#styling)
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+The Quiz App is an interactive, web-based application designed to provide users with an engaging quiz-taking experience. Built with React and leveraging modern web technologies, this app offers a seamless and responsive interface for users to test their knowledge across various topics.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Multiple quiz selection
+- Support for different question types:
+  - Single choice
+  - Multiple choice
+  - True/False
+- Timer for each question
+- Navigation between questions
+- Dark mode toggle
+- Responsive design for various screen sizes
+- Final score summary and review
+- Option to restart the quiz or return to home
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React.js
+- Zustand (for state management)
+- Tailwind CSS (for styling)
+- Framer Motion (for animations)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+Before you begin, ensure you have met the following requirements:
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To install the Quiz App, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
+   ```
+   git clone https://github.com/neeldholiya04/quizApp.git
+   ```
 
-### `npm run eject`
+2. Navigate to the project directory:
+   ```
+   cd quizApp
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the dependencies:
+   ```
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Usage
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run the Quiz App locally:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Start the development server:
+   ```
+   npm start
+   ```
 
-## Learn More
+2. Open your browser and visit `http://localhost:3000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. Select a quiz from the home page to begin.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Answer the questions within the time limit.
 
-### Code Splitting
+5. Navigate between questions using the 'Previous' and 'Next' buttons.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. Submit your answers on the last question to see your final score.
 
-### Analyzing the Bundle Size
+7. Review your answers and choose to restart the quiz or return to the home page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Project Structure
 
-### Making a Progressive Web App
+```
+quizApp/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── AnswerChoice/
+│   │   ├── Question/
+│   │   ├── QuizSelection/
+│   │   ├── QuizSummary/
+│   │   └── ThemeToggle/
+│   ├── store/
+│   │   └── quizStore.js
+│   ├── data/
+│   │   └── quizzes.js
+│   ├── App.jsx
+│   └── index.jsx
+├── package.json
+└── tailwind.config.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Components
 
-### Advanced Configuration
+### App.jsx
+The main component that orchestrates the quiz flow and renders other components based on the current state.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### QuizSelection
+Displays available quizzes for the user to choose from.
 
-### Deployment
+### Question
+Renders individual quiz questions, handles user input, and manages the timer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### AnswerChoice
+Represents a single answer choice within a question.
 
-### `npm run build` fails to minify
+### QuizSummary
+Displays the final score and allows users to review their answers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ThemeToggle
+Provides functionality to switch between light and dark modes.
+
+## State Management
+
+The app uses Zustand for state management. The main store (`quizStore.js`) handles:
+- Quiz selection
+- Question navigation
+- Answer tracking
+- Score calculation
+- Theme toggling
+
+## Styling
+
+Tailwind CSS is used for styling, providing a responsive and customizable design. The `tailwind.config.js` file contains custom theme configurations.
+
